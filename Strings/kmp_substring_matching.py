@@ -59,10 +59,9 @@ def kmp_match_substrings(match_string, pattern):
                 # the patterns have matched
                 matches[i - pat_len + 1] = 1  # set the place of match
                 j = pre_su_tab[j]
-                i = i + 1
             else:
-                i = i + 1
                 j = j + 1
+            i = i + 1
         else:
             # This is not a match or a partial match
             if j == 0:
